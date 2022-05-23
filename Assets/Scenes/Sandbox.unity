@@ -4710,6 +4710,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4253297328530706517, guid: 386af45775f34f94ea083fad2d0054a6, type: 3}
+      propertyPath: graveStone
+      value: 
+      objectReference: {fileID: 994974634}
+    - target: {fileID: 4253297328530706517, guid: 386af45775f34f94ea083fad2d0054a6, type: 3}
       propertyPath: aliveColor.a
       value: 1
       objectReference: {fileID: 0}

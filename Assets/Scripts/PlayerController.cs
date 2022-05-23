@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour, IPlayer
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (graveStone == null)
+        {
+            graveStone = FindObjectOfType<GraveStone>();
+        }
+
         UpdateGhostState();
     }
 
@@ -99,7 +104,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     {
         isGhost = false;
         UpdateGhostState();
-        graveStone.Activate(transform.position);
+        graveStone.Deactive();
     }
 
     [ContextMenu(nameof(Undead))]
@@ -107,8 +112,8 @@ public class PlayerController : MonoBehaviour, IPlayer
     {
         isGhost = true;
         UpdateGhostState();
-                graveStone.Deactive();
-
+        var position = transform.position;
+        graveStone.Activate(position + Vector3.one);
     }
 }
 
