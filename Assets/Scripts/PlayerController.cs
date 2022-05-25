@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,9 +31,14 @@ public class PlayerController : MonoBehaviour, IPlayer
         if (graveStone == null)
         {
             graveStone = FindObjectOfType<GraveStone>();
+            graveStone.Deactive();
         }
 
         UpdateGhostState();
+    }
+
+    private void Start()
+    {
     }
 
     void FixedUpdate()

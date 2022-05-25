@@ -6,14 +6,20 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     #region Singleton Stuff
+
     static LevelManager instance;
-    public static LevelManager Instance { get { return instance; } }
+
+    public static LevelManager Instance
+    {
+        get { return instance; }
+    }
 
     protected virtual void Awake()
     {
         if (instance != null)
         {
-            Debug.LogErrorFormat("[Singleton] Trying to instantiate a second instance of singleton class {0} from {1}", GetType().Name, this.gameObject.name);
+            Debug.LogErrorFormat("[Singleton] Trying to instantiate a second instance of singleton class {0} from {1}",
+                GetType().Name, this.gameObject.name);
             Destroy(this.gameObject);
         }
         else
@@ -29,6 +35,7 @@ public class LevelManager : MonoBehaviour
             instance = null;
         }
     }
+
     #endregion
 
     PlayerController player;
@@ -42,5 +49,11 @@ public class LevelManager : MonoBehaviour
     {
         player.isActive = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NextLevel()
+    {
+        player.isActive = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }

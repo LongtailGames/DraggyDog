@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 881900718665398578}
   - component: {fileID: 4253297328530706512}
   - component: {fileID: 4253297328530706517}
-  - component: {fileID: 1974945641}
-  - component: {fileID: 1974945647}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -69,7 +67,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 4253297328530706518}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1e9f9da79dc32294189a383dd6137eb7, type: 2}
+  m_Material: {fileID: 6200000, guid: b25b77daa182a9008b6d9b03bf79d9b0, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -124,35 +122,10 @@ MonoBehaviour:
   isActive: 1
   isGhost: 0
   lift: 5
-  sprite: {fileID: 4253297329431871019}
-  ghostColor: {r: 0.30196083, g: 0.8980392, b: 0.8861201, a: 0.41960785}
-  aliveColor: {r: 0.45756948, g: 0.9811321, b: 0.43965825, a: 1}
+  sprite: {fileID: 0}
+  ghostColor: {r: 0, g: 0, b: 0, a: 0}
+  aliveColor: {r: 0, g: 0, b: 0, a: 0}
   graveStone: {fileID: 0}
---- !u!114 &1974945641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4253297328530706518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5c7b62f81adf2643a65e50f19434e8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1974945647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4253297328530706518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 724cd15bd4163a61cb53c4f14d7686fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeedThreshold: 11
 --- !u!1 &4253297329264242479
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +257,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb823fd6b570e0542badff7159f19878, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe918c99c7052fc748726150fb2172ef, type: 3}
   m_Color: {r: 0.45660377, g: 1, b: 0.5052323, a: 1}
   m_FlipX: 0
   m_FlipY: 0

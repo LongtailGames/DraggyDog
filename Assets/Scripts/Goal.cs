@@ -1,10 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] int target;
+    [SerializeField] int target=-1;
     [SerializeField] Color defaultColor = Color.red;
     [SerializeField] Color unlockColor = Color.blue;
     
@@ -12,6 +14,14 @@ public class Goal : MonoBehaviour
     Wallet playerWallet;
 
     bool isUnlocked;
+
+    private void Start()
+    {
+        if (target == -1)
+        {
+            target = FindObjectsOfType<Pickup>().Count(pickup => pickup.enabled);
+        }
+    }
 
     void Awake() 
     {
@@ -36,7 +46,7 @@ public class Goal : MonoBehaviour
         if (other.GetComponent<Wallet>() == playerWallet)
         {
             if(isUnlocked) {
-                LevelManager.Instance.ReloadLevel();
+                LevelManager.Instance.NextLevel();
             }
         }
     }
