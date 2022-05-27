@@ -56,4 +56,9 @@ public class LevelManager : MonoBehaviour
         player.isActive = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+
+    public void GameOver()
+    {
+        ReloadLevel();
+    }
 }

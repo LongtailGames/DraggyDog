@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour, IPlayer
@@ -21,12 +24,14 @@ public class PlayerController : MonoBehaviour, IPlayer
     [SerializeField] private Color ghostColor;
     [SerializeField] private Color aliveColor;
     [SerializeField] private GraveStone graveStone;
+    private LifeMeter lifeMeter;
 
 
     const string platformLayer = "Platform";
 
     void Awake()
     {
+        lifeMeter = GetComponentInChildren<LifeMeter>();
         rb = GetComponent<Rigidbody2D>();
         if (graveStone == null)
         {
@@ -39,6 +44,12 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private void Start()
     {
+        lifeMeter.timeout.AddListener(Dead);
+    }
+
+    private void Dead()
+    {
+        LevelManager.Instance.GameOver();
     }
 
     void FixedUpdate()
@@ -111,6 +122,13 @@ public class PlayerController : MonoBehaviour, IPlayer
         isGhost = false;
         UpdateGhostState();
         graveStone.Deactive();
+        lifeMeter.StopCountdownRoutine();
+    }
+
+
+    public IEnumerator StartCountDown()
+    {
+        yield return null;
     }
 
     [ContextMenu(nameof(Undead))]
@@ -120,8 +138,10 @@ public class PlayerController : MonoBehaviour, IPlayer
         UpdateGhostState();
         var position = transform.position;
         graveStone.Activate(position + Vector3.one);
+        lifeMeter.StartCountdownRoutine();
     }
 }
+
 
 public interface IPlayer
 {
