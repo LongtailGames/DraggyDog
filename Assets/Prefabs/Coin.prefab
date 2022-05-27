@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8124854763809590930}
   - component: {fileID: 269294930725697496}
   - component: {fileID: -1949514071981901853}
+  - component: {fileID: 1700659580883259176}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -111,6 +112,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 8124854763809590931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be69d71c09812540b4b0512ef34a8f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d08a3a14ab6498a9c547c4e378a66a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1700659580883259176}
+        m_TargetAssemblyTypeName: SoundManager.SoundManagerTests.SFXPlaySound, SoundManagerTests
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 248d24cc9a8cc9ab08c790fd16168286, type: 2}
+          m_ObjectArgumentAssemblyTypeName: SoundManager.SoundManagerTests.SFXSound,
+            SoundManagerTests
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1700659580883259176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8124854763809590931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb580d2fbc74df5aa06f9242a43604a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

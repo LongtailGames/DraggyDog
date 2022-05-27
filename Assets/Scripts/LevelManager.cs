@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class LevelManager : MonoBehaviour
 {
     #region Singleton Stuff
@@ -47,14 +48,22 @@ public class LevelManager : MonoBehaviour
 
     public void ReloadLevel()
     {
-        player.isActive = false;
+        DisablePlayer();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void NextLevel()
     {
-        player.isActive = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        DisablePlayer();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void DisablePlayer()
+    {
+        if (player != null)
+        {
+            player.isActive = false;
+        }
     }
 
     public void GameOver()

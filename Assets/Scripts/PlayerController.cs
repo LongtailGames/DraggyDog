@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     [SerializeField] private Color aliveColor;
     [SerializeField] private GraveStone graveStone;
     private LifeMeter lifeMeter;
+    [SerializeField] private UnityEvent onJump;
 
 
     const string platformLayer = "Platform";
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         {
             rb.velocity += new Vector2(0f, jumpForce);
             isJumping = false;
+            onJump?.Invoke();
             Debug.Log("Jumped");
         }
     }

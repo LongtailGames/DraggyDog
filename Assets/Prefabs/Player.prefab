@@ -640,6 +640,9 @@ MonoBehaviour:
   ghostColor: {r: 0.30196083, g: 0.8980392, b: 0.8861201, a: 0.41960785}
   aliveColor: {r: 0.45756948, g: 0.9811321, b: 0.43965825, a: 1}
   graveStone: {fileID: 0}
+  onJump:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1974945641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,7 +799,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fe918c99c7052fc748726150fb2172ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb823fd6b570e0542badff7159f19878, type: 3}
   m_Color: {r: 0.45660377, g: 1, b: 0.5052323, a: 1}
   m_FlipX: 0
   m_FlipY: 0

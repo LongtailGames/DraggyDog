@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Greeting screen.unity
+    guid: 871d096a60926a55785810c3b99d1b2c
   - enabled: 1
     path: Assets/Scenes/Sandbox.unity
     guid: 53f2237b78c3d0cd3a5be34b4eba25c1
