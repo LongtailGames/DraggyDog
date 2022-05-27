@@ -141,10 +141,3 @@ public class PlayerController : MonoBehaviour, IPlayer
         lifeMeter.StartCountdownRoutine();
     }
 }
-
-
-public interface IPlayer
-{
-    void Alive();
-    void Undead();
-}

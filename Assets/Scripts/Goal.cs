@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    [SerializeField] int target=-1;
+    int target=-1;
     [SerializeField] Color defaultColor = Color.red;
     [SerializeField] Color unlockColor = Color.blue;
     
@@ -19,7 +16,7 @@ public class Goal : MonoBehaviour
     {
         if (target == -1)
         {
-            target = FindObjectsOfType<Pickup>().Count(pickup => pickup.enabled);
+            target = FindObjectsOfType<Coin>().Count(pickup => pickup.enabled);
         }
     }
 

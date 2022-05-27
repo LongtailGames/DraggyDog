@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/001-dropFly.unity
     guid: 584fbc12152e97e0aa594b64d91c15f3
   - enabled: 1
+    path: Assets/Scenes/002.unity
+    guid: 3e95b77ca8e7e29fe8c5045edc5a2d69
+  - enabled: 1
+    path: Assets/Scenes/003.unity
+    guid: 7377e0162082ef2119997966ab81adc7
+  - enabled: 1
+    path: Assets/Scenes/004.unity
+    guid: 4997c6b728b6b893baece2a89c13e1ca
+  - enabled: 1
     path: Assets/Scenes/Thank you.unity
     guid: 16a382e42e9e9b2f786ae1a64eee589e
   m_configObjects:
