@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Key : Pickup
 {
-    [SerializeField] private GameObject DoorToDisable;
+    [SerializeField] private GameObject doorToDisable;
 
     protected override bool OnCollect(Collider2D other)
     {
@@ -10,7 +10,7 @@ public class Key : Pickup
 
         if (other.TryGetComponent(out PlayerController wallet))
         {
-            DoorToDisable.SetActive(false);
+            doorToDisable.SetActive(false);
             result = true;
         }
 

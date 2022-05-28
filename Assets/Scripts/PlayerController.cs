@@ -1,10 +1,7 @@
-using System;
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour, IPlayer
@@ -20,16 +17,15 @@ public class PlayerController : MonoBehaviour, IPlayer
     Vector2 rawInput;
     bool isJumping;
     Rigidbody2D rb;
-    [SerializeField] private float lift = 5f;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Color ghostColor;
     [SerializeField] private Color aliveColor;
     [SerializeField] private GraveStone graveStone;
     private LifeMeter lifeMeter;
-    [SerializeField] private UnityEvent onJump;
+    [SerializeField] private UnityEvent onJump, onAlive, onUndead, onDead;
 
 
-    const string platformLayer = "Platform";
+    private const string PlatformLayer = "Platform";
 
     void Awake()
     {
@@ -52,6 +48,7 @@ public class PlayerController : MonoBehaviour, IPlayer
     private void Dead()
     {
         LevelManager.Instance.GameOver();
+        onDead?.Invoke();
     }
 
     void FixedUpdate()
@@ -111,7 +108,7 @@ public class PlayerController : MonoBehaviour, IPlayer
             return;
         }
 
-        if (!feet.IsTouchingLayers(LayerMask.GetMask(platformLayer)))
+        if (!feet.IsTouchingLayers(LayerMask.GetMask(PlatformLayer)))
         {
             return;
         }
@@ -126,6 +123,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         UpdateGhostState();
         graveStone.Deactive();
         lifeMeter.StopCountdownRoutine();
+        onAlive?.Invoke();
     }
 
 
@@ -142,5 +140,6 @@ public class PlayerController : MonoBehaviour, IPlayer
         var position = transform.position;
         graveStone.Activate(position + Vector3.one);
         lifeMeter.StartCountdownRoutine();
+        onUndead?.Invoke();
     }
 }

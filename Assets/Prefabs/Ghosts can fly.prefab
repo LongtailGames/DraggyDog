@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3250060471925535744, guid: 7d3075d5bea44becab56180f23570242, type: 3}
@@ -93,7 +94,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5345163906922314708, guid: 7d3075d5bea44becab56180f23570242, type: 3}
       propertyPath: m_Name
-      value: Hint
+      value: Ghosts can fly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3075d5bea44becab56180f23570242, type: 3}

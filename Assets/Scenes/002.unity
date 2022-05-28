@@ -313,7 +313,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -434,7 +434,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3947,7 +3947,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3986,6 +3986,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (7)
@@ -4435,6 +4439,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (3)
@@ -4554,6 +4562,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (4)
@@ -4638,6 +4650,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (1)
@@ -4857,6 +4873,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (5)
@@ -4924,6 +4944,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (9)
@@ -4981,6 +5005,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (8)
@@ -5048,6 +5076,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (6)
@@ -5514,6 +5546,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2143211327}
     m_Modifications:
+    - target: {fileID: 8124854763809590930, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 8124854763809590931, guid: 455a2cadf2b7f944c95878cabbe80fc0, type: 3}
       propertyPath: m_Name
       value: coinBlank (0)

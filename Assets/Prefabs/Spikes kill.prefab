@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5345163906922314708, guid: 7d3075d5bea44becab56180f23570242, type: 3}
       propertyPath: m_Name
-      value: Hint
+      value: Spikes kill
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3075d5bea44becab56180f23570242, type: 3}

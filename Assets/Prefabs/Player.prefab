@@ -302,6 +302,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -526,6 +527,7 @@ GameObject:
   - component: {fileID: 4253297328530706517}
   - component: {fileID: 1974945641}
   - component: {fileID: 1974945647}
+  - component: {fileID: 1447451116}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -549,7 +551,7 @@ Transform:
   - {fileID: 4253297329264242478}
   - {fileID: 1046848755}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4253297328530706515
 Rigidbody2D:
@@ -635,12 +637,46 @@ MonoBehaviour:
   feet: {fileID: 4253297329264242477}
   isActive: 1
   isGhost: 0
-  lift: 5
   sprite: {fileID: 4253297329431871019}
   ghostColor: {r: 0.30196083, g: 0.8980392, b: 0.8861201, a: 0.41960785}
   aliveColor: {r: 0.45756948, g: 0.9811321, b: 0.43965825, a: 1}
   graveStone: {fileID: 0}
   onJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1447451116}
+        m_TargetAssemblyTypeName: SoundManager.SoundManagerTests.SFXPlaySound, SoundManager
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 00dcebf83be0d22eaabac382de2937e0, type: 2}
+          m_ObjectArgumentAssemblyTypeName: SoundManager.SoundManagerTests.SFXSound,
+            SoundManager
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAlive:
+    m_PersistentCalls:
+      m_Calls: []
+  onUndead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1447451116}
+        m_TargetAssemblyTypeName: SoundManager.SoundManagerTests.SFXPlaySound, SoundManager
+        m_MethodName: PlaySound
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 6ff1ea34aa8c070c3a2e7331daba753e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: SoundManager.SoundManagerTests.SFXSound,
+            SoundManager
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDead:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1974945641
@@ -668,6 +704,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeedThreshold: 11
+--- !u!114 &1447451116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253297328530706518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb580d2fbc74df5aa06f9242a43604a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4253297329264242479
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +826,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
