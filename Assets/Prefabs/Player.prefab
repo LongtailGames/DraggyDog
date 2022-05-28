@@ -551,7 +551,7 @@ Transform:
   - {fileID: 4253297329264242478}
   - {fileID: 1046848755}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4253297328530706515
 Rigidbody2D:
@@ -639,7 +639,9 @@ MonoBehaviour:
   isGhost: 0
   sprite: {fileID: 4253297329431871019}
   ghostColor: {r: 0.30196083, g: 0.8980392, b: 0.8861201, a: 0.41960785}
-  aliveColor: {r: 0.45756948, g: 0.9811321, b: 0.43965825, a: 1}
+  aliveColor: {r: 1, g: 1, b: 1, a: 1}
+  ghostSprite: {fileID: 21300000, guid: 919ee3f72a98a4797bed20eb42df27f2, type: 3}
+  aliveSprite: {fileID: 21300000, guid: 4b2fec4113d1a3d2390906eb8a485ee8, type: 3}
   graveStone: {fileID: 0}
   onJump:
     m_PersistentCalls:
@@ -800,8 +802,8 @@ Transform:
   m_GameObject: {fileID: 4253297329431871022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4253297328530706513}
   m_RootOrder: 0
@@ -847,8 +849,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb823fd6b570e0542badff7159f19878, type: 3}
-  m_Color: {r: 0.45660377, g: 1, b: 0.5052323, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4b2fec4113d1a3d2390906eb8a485ee8, type: 3}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour, IPlayer
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private Color ghostColor;
     [SerializeField] private Color aliveColor;
+    [SerializeField] private Sprite ghostSprite, aliveSprite;
+
     [SerializeField] private GraveStone graveStone;
     private LifeMeter lifeMeter;
     [SerializeField] private UnityEvent onJump, onAlive, onUndead, onDead;
@@ -81,9 +83,11 @@ public class PlayerController : MonoBehaviour, IPlayer
         {
             case true:
                 sprite.color = ghostColor;
+                sprite.sprite = ghostSprite;
                 break;
             case false:
                 sprite.color = aliveColor;
+                sprite.sprite = aliveSprite;
                 break;
         }
     }
